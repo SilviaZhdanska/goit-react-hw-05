@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link, Outlet } from "react-router-dom";
+import {
+  useParams,
+  Link,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import axios from "axios";
 import styles from "./MovieDetailsPage.module.css";
 
 function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -27,10 +35,15 @@ function MovieDetailsPage() {
     fetchMovieDetails();
   }, [movieId]);
 
+  const handleGoBack = () => {
+    navigate(location.state?.from || "/");
+  };
+
   return (
     <div className={styles.container}>
       {movie && (
         <>
+          <button onClick={handleGoBack}>Back</button>
           <h1>{movie.title}</h1>
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
