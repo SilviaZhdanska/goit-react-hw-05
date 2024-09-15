@@ -1,0 +1,23 @@
+.container {
+  padding: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}

@@ -1,0 +1,25 @@
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.list li {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 150px;
+  text-align: center;
+}
+
+.list img {
+  width: 100%;
+  height: auto;
+}
+
+.list p {
+  margin: 0;
+  padding: 0.5rem;
+}

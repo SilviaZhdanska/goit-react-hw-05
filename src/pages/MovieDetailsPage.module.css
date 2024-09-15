@@ -1,0 +1,26 @@
+.container {
+  padding: 1rem;
+}
+
+img {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #333;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #007bff;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
